@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+}
+body {
+  background: url("images/bg-stars.svg") hsl(257, 19%, 14%);
+  background-size: cover;
+}
+h1 {
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 1.4vw;
+  text-align: center;
+  margin: 8% auto 5%;
+}
+.countDown {
+  position: relative;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 0.25fr);
+  grid-gap: 30px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vw;
+  width: 8vw;
+  border-radius: 5px;
+  background-color: hsl(236, 21%, 26%);
+  color: hsl(345, 95%, 68%);
+  box-shadow: 0px 10px hsl(234, 17%, 12%);
+  position: relative;
+  overflow: hidden;
+}
+.card::before,
+.card::after {
+  content: "";
+  height: 1vw;
+  width: 1vw;
+  border-radius: 50%;
+  background-color: hsl(234, 17%, 12%);
+  position: absolute;
+}
+.card::before {
+  left: -0.5vw;
+}
+.card::after {
+  right: -0.5vw;
+}
+.flip-part {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  font-size: 4.5vw;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(30, 31, 41, 0.4) 50%,
+    rgba(30, 31, 41, 0) 50%
+  );
+  z-index: 1;
+}
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.8vw;
+  color: hsl(237, 18%, 59%);
+}
+ul {
+  background: url("images/pattern-hills.svg") no-repeat;
+  background-size: cover;
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.link {
+  list-style: none;
+}
+.link:nth-child(2) {
+  margin: auto 2%;
+}
+.fab {
+  font-size: 1.75vw;
+  color: hsl(237, 18%, 59%);
+}
+.fab:hover {
+  color: hsl(345, 95%, 68%);
+  cursor: pointer;
+}
+.attribution,
+.attribution > p {
+  position: absolute;
+  bottom: 0;
+}
+.attribution > p {
+  font-size: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
