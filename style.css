@@ -127,3 +127,27 @@ ul {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+/****************responsiveness*******************/
+@media screen and (max-width: 480px) {
+  h1 {
+    margin: 24% auto 10%;
+    font-size: 3vw;
+  }
+  .countDown {
+    width: 80%;
+    grid-gap: 20px;
+  }
+  .card {
+    height: 16vw;
+    width: 16vw;
+  }
+  .flip-part {
+    font-size: 6.5vw;
+  }
+  .title {
+    font-size: 1.6vw;
+  }
+  .fab {
+    font-size: 5vw;
+  }
+}
